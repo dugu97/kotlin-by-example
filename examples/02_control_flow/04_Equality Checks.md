@@ -1,6 +1,6 @@
 # Equality Checks
 
-Kotlin uses `==` for structural comparison and `===` for referential comparison.
+Kotlin使用`==`进行结构比较，使用'===`进行引用比较。
 
 More precisely, `a == b` compiles down to `a == null ? b == null : a.equals(b)`.
 
@@ -17,5 +17,5 @@ fun main(args: Array<String>) {
 }
 ```
 
-1. Returns `true` because it calls `authors.equals(writers)` and sets ignore element order.
-2. Returns `false` because `authors` and `writers` are distinct references.
+1. 返回true，因为它调用authors.equals（writers）并且set数据结构是忽略元素顺序的。
+2. 返回“ false”，因为“ authors”和“ writers”是不同的引用。

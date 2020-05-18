@@ -1,6 +1,6 @@
 # When
 
-Instead of the widely used `switch` statement, Kotlin provides the more flexible and clear `when` construction. It can be used either as a statement or as an expression.
+Kotlin去除了广泛使用的`switch`语句，而是提供了更灵活,更清晰的`when`构造。它既可以用作语句也可以用作表达式。
 
 ## When Statement
 
@@ -59,8 +59,9 @@ class MyClass
 ```
 
 
-1. This is a `when` expression. 
+1. This is a `when` expression.
 2. Sets the value to `"one"` if `obj` equals to one.
 3. Sets the value to one if `obj` equals to `Hello`.
 4. Sets the value to `false` if `obj` is an instance of `Long`.
-5. Sets the value "42" if none of the previous conditions are satisfied. Unlike in `when` _statement_, the default branch is usually required in `when` _expression_, except the case when the compiler can check that other branches cover all possible cases.
+5. Sets the value "42" if none of the previous conditions are satisfied.
+6. 特别注意,与`when statement`中不同，`when expression`中通常需要默认分支，除非编译器可以检查其他分支是否涵盖了所有可能的情况。

@@ -1,6 +1,6 @@
 # Conditional Expression
 
-There is no ternary operator `condition ? then : else` in Kotlin. Instead, `if` may be used as an expression:
+Kotlin没有三元运算符 `condition ? then : else`. 而是把`if`可以用作表达式：
 
 ```run-kotlin
 fun main() {
@@ -12,4 +12,4 @@ fun main() {
 }
 ```
 
-1. `if` is an expression here: it returns a value.
+1. if是此处的表达式：它返回一个值。

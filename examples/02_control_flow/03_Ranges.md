@@ -1,6 +1,6 @@
 # Ranges
 
-There is a set of tools for defining ranges in Kotlin. Let's have a brief look at them.
+Kotlin中有一组用于定义范围的工具。让我们简要地看一下它们。
 
 ```run-kotlin
 fun main() {
@@ -24,11 +24,11 @@ fun main() {
 }
 ```
 
-1. Iterates over a range starting from 0 up to 3 (inclusive).
-2. Iterates over a range with a custom increment step for consecutive elements.
-5. Iterates over a range in _reverse_ order.
+1. 在0到3（包括3）之间的范围内进行迭代。
+2. 使用自定义增量步长对连续元素进行遍历。
+5. 以_reverse(相反)_顺序遍历一个范围。
 
-Char ranges are also supported: 
+字符范围也受支持：
 
 ```run-kotlin
 fun main() {
@@ -47,10 +47,10 @@ fun main() {
 }
 ```
 
-1. Iterates over a char range in alphabetical order.
-2. Char ranges support `step` and `downTo` as well.
+1. 以字母顺序遍历char范围。
+2. 字符范围也支持`step`和`downTo`。
 
-Ranges are also useful in `if` statements:
+范围在`if`语句中也很有用：
 
 ```run-kotlin
 fun main() {
@@ -69,4 +69,4 @@ fun main() {
 ```
 
 1. Checks if a value is in the range.
-2. `!in` is the opposite of `in`.
+2. `!in`与`in`相反。

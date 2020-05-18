@@ -1,6 +1,6 @@
 # Loops
 
-Kotlin supports all the commonly used loops: `for`, `while`, `do-while`
+Kotlin支持所有常用的循环：`for`，`while`，`do-while`
 
 ### `for`
 
@@ -49,9 +49,9 @@ fun main(args: Array<String>) {
 1. Executes the block while the condition is true.
 2. Executes the block first and then checking the condition.
 
-### Iterators
+### Iterators(迭代器)
 
-You can define your own iterators in your classes by implementing the `iterator` operator in them.
+您可以通过在类中实现`iterator`运算符来定义自己的迭代器。
 
 ```run-kotlin
 class Animal(val name: String)
@@ -74,10 +74,10 @@ fun main() {
 }
 ```
 
-1. Defines an iterator in a class. It must be named `iterator` and have the `operator` modifier.
-2. Returns the iterator that meets the following method requirements:
+1. 在类中定义迭代器。它必须命名为“ iterator”并具有“ operator”修饰符。
+2. 返回迭代器要求需要实现以下的方法
   * `next()`: `Animal`
   * `hasNext()`: `Boolean`
 3. Loops through animals in the zoo with the user-defined iterator.
 
-The iterator can be declared in the type or as an extension function.
+迭代器可以以类型或扩展函数声明。
