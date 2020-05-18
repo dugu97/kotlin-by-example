@@ -1,6 +1,6 @@
 # Generics
 
-[Generics](https://kotlinlang.org/docs/reference/generics.html) are a genericity mechanism that's become standard in modern languages. Generic classes and functions increase code reusability by encapsulating common logic that is independent of a particular generic type, like the logic inside a `List<T>` is independent of what `T` is.
+[泛型](https://kotlinlang.org/docs/reference/generics.html)是一种泛型机制，它已经成为现代语言的标准。泛型类和函数通过封装独立于特定泛型类型的通用逻辑来提高代码的可重用性，比如`List<T>`中的逻辑独立于`T`。
 
 ### Generic Classes
 
@@ -43,16 +43,16 @@ fun main() {
 ```
 
 
-1. Defines a generic class `MutableStack<E>` where `E` is called the _generic type parameter_. At use-site, it is assigned to a specific type such as `Int` by declaring a `MutableStack<Int>`.
-2. Inside the generic class, `E` can be used as a parameter like any other type.
-3. You can also use `E` as a return type.
+1. 定义一个泛型类`MutableStack<E>`，其中`E`称为泛型类型参数。 在使用时，通过声明一个`MutableStack<Int>`，它被分配给一个特定的类型，例如`Int`。
+2. 在泛型类内部，`E`可以像其他类型一样用作参数。
+3. 还可以使用`E`作为返回类型。
 
 Note that the implementation makes heavy use of Kotlin's shorthand syntax for functions that can be defined in a single expression.
 
 
 ### Generic Functions
 
-You can also [generify functions](https://kotlinlang.org/docs/reference/generics.html#generic-functions) if their logic is independent of a specific type. For instance, you can write a utility function to create mutable stacks:
+你还可以使用 [泛型函数](https://kotlinlang.org/docs/reference/generics.html#generic-functions) 如果函数的逻辑独立于特定类型,例如，你可以编写一个实用函数来创建可变堆栈
 
 
 ```run-kotlin
@@ -83,4 +83,4 @@ fun main() {
 //sampleEnd
 ```
 
-Note that the compiler can infer the generic type from the parameters of `mutableStackOf` so that you don't have to write `mutableStackOf<Double>(...)`.
+注意，编译器可以从`mutableStackOf`的参数推断出泛型类型，这样您就不必编写`mutableStackOf<Double>(…)`。

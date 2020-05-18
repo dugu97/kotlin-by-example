@@ -20,7 +20,7 @@ fun main() {
 }
 ```
 
-1. Declares a class named `Customer` without any properties or user-defined constructors. A non-parameterized default constructor is created by Kotlin automatically.
+1. 声明一个名为`Customer`的类，该类没有任何属性或用户定义的构造函数。Kotlin会自动创建一个非参数的默认构造函数。
 2. Declares a class with two properties: immutable `id` and mutable `email`, and a constructor with two parameters `id` and `email`.
 3. Creates an instance of the class `Customer` via the default constructor. Note that there is no `new` keyword in Kotlin.
 4. Creates an instance of the class `Contact` using the constructor with two arguments.

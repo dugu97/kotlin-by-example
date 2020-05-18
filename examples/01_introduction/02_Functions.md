@@ -64,18 +64,18 @@ class Person(val name: String) {
 }
 ```
 
-1. Defines an infix extension function on `Int`.
-2. Calls the infix function.
-3. Creates a `Pair` by calling the infix function `to` from the standard library.
-4. Here's your own implementation of `to` creatively called `onto`.
-5. Infix notation also works on members functions (methods).
-6. The containing class becomes the first parameter.
+1. 定义`Int`上的中缀扩展函数。
+2. 调用中缀函数。
+3. 通过从标准库中调用中缀函数`to`来创建`Pair`。
+4. 自定义`onto`中缀函数来实现`to`函数的功能
+5. 中缀表示法也适用于对象里面函数(方法)。
+6. 所处的对象或者类 即是 中缀 第一个参数（即调用方）。
 
 Note that the example uses [local functions](https://kotlinlang.org/docs/reference/functions.html#local-functions) (functions nested within another function).
 
 ### Operator Functions
 
-Certain functions can be "upgraded" to [operators](https://kotlinlang.org/docs/reference/operator-overloading.html), allowing their calls with the corresponding operator symbol.
+某些中缀扩展函数可以“升级”运算符层面 [operators](https://kotlinlang.org/docs/reference/operator-overloading.html), allowing their calls with the corresponding operator symbol.
 
 ```run-kotlin
 fun main() {
@@ -90,10 +90,10 @@ fun main() {
 }
 ```
 
-1. This takes the infix function from above one step further using the `operator` modifier.
-2. The operator symbol for `times()` is `*` so that you can call the function using `2 * "Bye"`.
-3. An operator function allows easy range access on strings.
-4. The `get()` operator enables [bracket-access syntax](https://kotlinlang.org/docs/reference/operator-overloading.html#indexed).
+1. 使用 `operator` 进一步修饰上述中缀函数，以升级到运算符层面r
+2. `times()`的操作符符号是`*` ，因此可以使用`2 * "Bye"`调用该函数。
+3. 运算符函数允许对字符串进行简单的范围访问。
+4. `get()`操作符启用了 [bracket-access syntax](https://kotlinlang.org/docs/reference/operator-overloading.html#indexed)语法.
 
 ### Functions with `vararg` Parameters
 
@@ -122,8 +122,8 @@ fun main() {
 }
 ```
 
-1. The `vararg` modifier turns a parameter into a vararg.
-2. This allows calling `printAll` with any number of string arguments.
-3. Thanks to named parameters, you can even add another parameter of the same type after the vararg. This wouldn't be allowed in Java because there's no way to pass a value.
-4. Using named parameters, you can set a value to `prefix` separately from the vararg.
-5. At runtime, a vararg is just an array. To pass it along into a vararg parameter, use the special spread operator `*` that lets you pass in `*entries` (a vararg of `String`) instead of `entries` (an `Array<String>`).
+1. 可变参数修饰符（`vararg`）将参数转换为 `vararg`.
+2. 这允许使用 任意数量 的字符串参数调用`printAll`.
+3. 由于可以命名参数，您甚至可以在vararg之后添加另一个相同类型的参数。这在Java中是不允许的，因为没有传递值的方法.
+4. 使用命名参数，可以给 prefix 独立设值，区别开vararg修饰的参数.
+5. 在运行时，entries只是一个数组。如果要将它传递给vararg参数，可以使用特殊的拓展操作符 * ，它允许您传递 *entries(字符串的vararg)，而不是entries(数组<String>)。通俗来说，就是以字符串的形式传递，而不是以数组的形式

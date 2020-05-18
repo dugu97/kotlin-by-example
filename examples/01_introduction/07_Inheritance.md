@@ -1,6 +1,6 @@
 # Inheritance
 
-Kotlin fully supports the traditional object-oriented inheritance mechanism. 
+Kotlin完全支持传统的面向对象的继承机制。
 
 ```run-kotlin
 open class Dog {                // 1
@@ -21,10 +21,10 @@ fun main() {
 }
 ```
 
-1. Kotlin classes are _final_ by default. If you want to allow the class inheritance, mark the class with the `open` modifier.
-2. Kotlin methods are also _final_ by default. As with the classes, the `open` modifier allows overriding them.
-3. A class inherits a superclass when you specify the `: SuperclassName()` after its name. The empty parentheses `()` indicate an invocation of the superclass default constructor.
-4. Overriding methods or attributes requires the `override` modifier.
+1. Kotlin类在默认情况下是_final_。如果您希望允许类继承，请使用`open`修饰符标记该类。
+2. Kotlin方法在默认情况下也是_final_。与类一样，`open`修饰符允许覆盖它们。
+3. 当您在类名后面指定:`SuperclassName()`时，该类继承一个超类。空括号`()`表示超类默认构造函数的调用。
+4. 重写方法或属性需要`override`修饰符。
 
 ### Inheritance with Parameterized Constructor
 
@@ -68,6 +68,6 @@ fun main() {
 //sampleEnd
 ```
 
-1. `name` in the `Asiatic` declaration is neither a `var` nor `val`: it's a constructor argument, whose value is passed to the `name` property of the superclass `Lion`. 
+1. 特别注意`name`既不是`var`也不是`val`,它是一个构造函数参数，其值被传递给超类`Lion`的`name`属性。
 2. Creates an `Asiatic` instance with the name `Rufo`. The call invokes the `Lion` constructor with arguments `Rufo` and `India`.
 
