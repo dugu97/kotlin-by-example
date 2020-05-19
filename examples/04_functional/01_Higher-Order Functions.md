@@ -1,6 +1,6 @@
-# Higher-Order Functions
+# Higher-Order Functions(高阶函数)
 
-A [*higher-order function*](https://kotlinlang.org/docs/reference/lambdas.html) is a function that takes another function as parameter and/or returns a function.
+[*高阶函数*](https://kotlinlang.org/docs/reference/lambdas.html) 是一个将另一个函数作为参数 and/or 返回一个函数的函数。
 
 ### Taking Functions as Parameters
 
@@ -18,11 +18,11 @@ fun main() {
 }
 ```
 
-1. Declares a higher-order function. It takes two integer parameters, `x` and `y`. Additionally, it takes another function `operation` as a parameter. The `operation` parameters and return type are also defined in the declaration.
-2. The higher order function returns the result of `operation` invocation with the supplied arguments.
-3. Declares a function that matches the `operation`signature.
-4. Invokes the higher-order function passing in two integer values and the function argument `::sum`. `::` is the notation that references a function by name in Kotlin.
-5. Invokes the higher-order function passing in a lambda as a function argument. Looks clearer, doesn't it?
+1. 声明一个高阶函数. 它接受两个整数参数，`x`和`y`. 另外，它使用另一个函数`operation`作为参数。声明中还定义了`operation`参数和返回类型。
+2. 高阶函数使用提供的参数返回`operation`调用的结果。
+3. 声明一个与`operation`signature匹配的函数。
+4. 调用传递两个整数值和函数参数`:: sum`的高阶函数。 `::`是在Kotlin中按名称引用函数的表示法。
+5. 调用传入lambda作为函数参数的高阶函数。看起来更清晰，不是吗？
 
 ### Returning Functions
 
@@ -39,8 +39,8 @@ fun main() {
 }
 ```
 
-1. Declares a higher-order function that returns a function.
+1. 声明一个返回函数的高阶函数。
 2. Declares a function matching the signature.
-3. Invokes `operation` to get the result assigned to a variable. Here `func` becomes `square` which is returned by `operation`.
-4. Invokes `func`. The `square` function is actually executed.
+3. 调用`operation`以将结果分配给变量。在这里，`func`变成`square`，由`operation`返回.
+4. 调用`func`, 实际上执行的是`Square`函数。
 

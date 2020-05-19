@@ -1,6 +1,6 @@
 # Extension Functions and Properties
 
-Kotlin lets you add new members to any class with the [extensions](https://kotlinlang.org/docs/reference/extensions.html) mechanism. Namely, there are two types of extensions: extension functions and extension properties. They look a lot like normal functions and properties but with one important difference: you need to specify the type that you extend.
+Kotlin允许您使用[扩展](https://kotlinlang.org/docs/reference/extensions.html)机制将新成员添加到任何类中。即，扩展有两种类型：扩展功能和扩展属性。它们看起来很像普通的函数和属性，但有一个重要的区别：您需要指定扩展的类型。
 
 ```run-kotlin
 data class Item(val name: String, val price: Float)                                   // 1  
@@ -24,13 +24,14 @@ fun main() {
 }
 ```
 
-1. Defines simple models of `Item` and `Order`. `Order` can contain a collection of `Item` objects.
+1. 定义`Item`和`Order`的简单模型。 `Order`可以包含`Item`对象的集合。
 2. Adds extension functions for the `Order` type.  
 3. Adds an extension property for the `Order` type.
-4. Calls extension functions directly on an instance of `Order`.
-5. Accesses the extension property on an instance of `Order`.
+4. 直接在`Order`实例上调用扩展功能。
+5. 访问`Order`实例的扩展属性。
 
-It is even possible to execute extensions on `null` references. In an extension function, you can check the object for `null` and use the result in your code:
+甚至有可能在`null`引用上执行扩展。`在扩展功能中`，您可以检查对象是否为`null`并在代码中使用结果：
+`?:`含义: `对象A` ?: `对象B` 表达式，意思为，当对象`A`值为`null`时，那么它就会返回后面的对象`B`。
 
 ```run-kotlin
 //sampleStart

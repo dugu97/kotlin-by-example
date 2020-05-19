@@ -1,12 +1,12 @@
 # Lambda Functions
 
-[*Lambda functions*](https://kotlinlang.org/docs/reference/lambdas.html) ("lambdas") are a simple way to create functions ad-hoc. Lambdas can be denoted very concisely in many cases thanks to type inference and the implicit `it` variable.
+[*Lambda functions*](https://kotlinlang.org/docs/reference/lambdas.html) ("lambdas")是临时创建函数的简单方法。由于类型推断和隐式的`it`变量，在很多情况下可以非常简洁地表示Lambda。
 
 ```run-kotlin
 fun main() {
 //sampleStart
-    // All examples create a function object that performs upper-casing.
-    // So it's a function from String to String
+    // 所有示例都创建一个转换大写的函数对象。
+    // 所以这是一个从String到String的函数
 
     val upperCase1: (String) -> String = { str: String -> str.toUpperCase() } // 1
 
@@ -29,9 +29,9 @@ fun main() {
 }
 ```
 
-1. A lambda in all its glory, with explicit types everywhere. The lambda is the part in curly braces, which is assigned to a variable of type `(String) -> String` (a function type).
-2. Type inference inside lambda: the type of the lambda parameter is inferred from the type of the variable it's assigned to.
-3. Type inference outside lambda: the type of the variable is inferred from the type of the lambda parameter and return value.
-4. You cannot do both together, the compiler has no chance to infer the type that way.
-5. For lambdas with a single parameter, you don't have to explicitly name it. Instead, you can use the implicit `it` variable. This is especially useful when the type of `it` can be inferred (which is often the case).
-6. If your lambda consists of a single function call, you may use function pointers (`::`) .
+1. A lambda in all its glory, with explicit types everywhere. lambda是花括号中的部分，花括号被分配给类型为 `(String) -> String` (a function type)的变量.
+2. lambda内部的类型推断：lambda参数的类型从`为其分配的变量`的类型推断。
+3. lambda之外进行类型推断：从`lambda参数的类型`和`返回值推断变量`的类型。
+4. 您不能一起做(指的是`2`和`3`)，编译器没有机会以这种方式推断类型。
+5. 对于具有单个参数的lambda，您不必显式命名它。相反，您可以使用隐式的`it`变量。当可以推断出`it`的类型（通常是这种情况）时，这尤其有用。
+6. 如果lambda由单个函数调用组成，则可以使用函数指针（`::`）。
