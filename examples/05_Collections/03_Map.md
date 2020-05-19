@@ -1,6 +1,6 @@
 # Map
 
-A [map](https://kotlinlang.org/docs/reference/collections.html) is a collection of key/value pairs, where each key is unique and is used to retrieve the corresponding value. For creating maps, there are functions `mapOf()` and `mutableMapOf()`. A read-only view of a mutable map can be obtained by casting it to `Map`. 
+A [map](https://kotlinlang.org/docs/reference/collections.html) map是键/值对的集合，其中每个键都是唯一的，并用于检索对应的值。为了创建地图，有`mapOf()`和`mutableMapOf()`函数。`mutableMap`的只读视图可以通过将其转换为`Map`来获得。
 
 ```run-kotlin
 const val POINTS_X_PASS: Int = 15

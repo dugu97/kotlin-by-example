@@ -1,6 +1,6 @@
 # any, all, none
 
-These functions check the existence of collection elements that match a given predicate.
+这些函数检查与给定谓词匹配的集合元素是否存在。
 
 ### Function `any`
 

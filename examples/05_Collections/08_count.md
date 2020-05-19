@@ -1,6 +1,6 @@
 # count
 
-`count` functions returns either the total number of elements in a collection or the number of elements matching the given predicate.
+`count` 函数返回集合中元素的总数或与给定谓词匹配的元素数。
 
 ```run-kotlin
 fun main() {

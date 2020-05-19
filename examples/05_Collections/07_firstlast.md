@@ -2,9 +2,9 @@
 
 ### `first`, `last`
 
-These functions return the first and the last element of the collection correspondingly. You can also use them with a predicate; in this case, they return the first or the last element that matches the given predicate.
+这些函数相应地返回集合的第一个和最后一个元素。您也可以将它们与谓词一起使用。在这种情况下，它们返回与给定谓词匹配的第一个或最后一个元素。
 
-If a collection is empty or doesn't contain elements matching the predicate, the functions throw `NoSuchElementException`.
+如果一个集合为空或不包含与谓词匹配的元素，则该函数将抛出`NoSuchElementException`。
 
 ```run-kotlin
 fun main() {
@@ -32,8 +32,7 @@ fun main() {
 
 ### `firstOrNull`, `lastOrNull`
 
-These functions work almost the same way with one difference: they return `null` if there are no matching elements.
-
+这些函数几乎以相同的方式工作，但有一个区别：如果没有匹配的元素，它们将返回`null`。
 ```run-kotlin
 fun main() {
 

@@ -1,6 +1,6 @@
 # find, findLast
 
-`find` and `findLast` functions return the first or the last collection element that matches the given predicate. If there are no such elements, functions return `null`.
+`find` and `findLast` 函数返回与给定谓词匹配的第一个或最后一个集合元素。如果没有这样的元素，则函数返回`null`。
 
 
 ```run-kotlin

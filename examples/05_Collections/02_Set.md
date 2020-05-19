@@ -1,6 +1,6 @@
 # Set
 
-A [set](https://kotlinlang.org/docs/reference/collections.html) is an unordered collection that does not support duplicates. For creating sets, there are functions `setOf()` and `mutableSetOf()`. A read-only view of a mutable set can be obtained by casting it to `Set`.  
+A [set](https://kotlinlang.org/docs/reference/collections.html)集合是不支持重复的无序集合。为了创建集合，有函数`setOf()`和`mutableSetOf()`。可变集的只读视图可以通过将其转换为`Set`来获得。  
 
 ```run-kotlin
 val openIssues: MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescr2", "uniqueDescr3") // 1

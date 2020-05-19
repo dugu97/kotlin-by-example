@@ -29,7 +29,7 @@ fun main() {
 }
 ```
 
-1. A lambda in all its glory, with explicit types everywhere. lambda是花括号中的部分，花括号被分配给类型为 `(String) -> String` (a function type)的变量.
+1. Lambda的所有特性中,还包含随处的显式类型. lambda是花括号中的部分，花括号被分配给类型为 `(String) -> String` (a function type)的变量.
 2. lambda内部的类型推断：lambda参数的类型从`为其分配的变量`的类型推断。
 3. lambda之外进行类型推断：从`lambda参数的类型`和`返回值推断变量`的类型。
 4. 您不能一起做(指的是`2`和`3`)，编译器没有机会以这种方式推断类型。

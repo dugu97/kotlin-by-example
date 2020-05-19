@@ -1,6 +1,6 @@
 # flatMap
 
-`flatMap` transforms each element of a collection into an iterable object and builds a single list of the transformation results. The transformation is user-defined. 
+`flatMap` 将集合的每个元素转换为可迭代的对象，并构建基于转换结果的单个列表。转换是用户自定义的。
 
 ```run-kotlin
 fun main() {
@@ -17,4 +17,4 @@ fun main() {
 ```
 
 1. Defines a collection of numbers.
-2. Builds a list in which every collection element is repeated three times. Important thing is that it's **not** a list of lists; it's a list of integers with nine elements. 
+2. 建立一个列表，其中每个集合元素都重复三遍。重要的是，它**不是**列表嵌套；这是一个有九个元素的整数列表。 

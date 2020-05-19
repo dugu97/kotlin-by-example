@@ -1,9 +1,9 @@
 # Map Element Access
 
-When applied to a map, `[]` operator returns the value corresponding to the given key, or `null` if there is no such key in the map.  
+当应用于地图时，`[]`运算符返回对应于给定键的值，如果map中没有这样的键，则返回`null`。
 
-`getValue` function returns an existing value corresponding to the given key or throws an exception if the key wasn't found. 
-For maps created with `withDefault`, `getValue` returns the default value instead of throwing an exception.
+`getValue` 函数返回与给定键对应的现有值，如果键不存在，则抛出异常。
+对于用`withDefault`创建的map, `getValue` 返回默认值，而不是抛出异常。
 
 ```run-kotlin
 fun main(args: Array<String>) {
@@ -36,5 +36,5 @@ fun main(args: Array<String>) {
 
 1. Returns 42 because it's the value corresponding to the key `"key"`.
 2. Returns `null` because `"key2"` is not in the map.
-3. Returns the default value because `"key2"` is absent. For this key it's 4.
+3. 返回默认值，因为不存在`key2`。所以对于这个key，默认值为4。`map.withDefault { k -> k.length }`表达的意思是默认值为key的长度。
 4. Throws `NoSuchElementException` because `"anotherKey"` is not in the map.

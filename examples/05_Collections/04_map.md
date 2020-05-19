@@ -1,6 +1,6 @@
 # map
 
-*map* extension function enables you to apply a transformation to all elements in a collection. It takes a transformer function as a lambda-parameter.
+*map* 扩展函数使您可以将transformation应用于集合中的所有元素。它采用一个transformer function作为lambda-parameter。
 
 ```run-kotlin
 fun main() {

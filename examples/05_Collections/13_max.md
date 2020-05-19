@@ -1,6 +1,6 @@
 # min, max
 
-`min` and `max` functions return the smallest and the largest element of a collection. If the collection is empty, they return `null`.
+`min` and `max` 函数返回集合中最小和最大的元素。如果集合为空，则返回`null`。
 
 ```run-kotlin
 fun main() {

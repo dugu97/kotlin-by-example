@@ -1,7 +1,6 @@
 # getOrElse
 
-`getOrElse` provides safe access to elements of a collection. It takes an index and a function that provides the  default value 
-in cases when the index is out of bound.
+`getOrElse` 提供对集合元素的安全访问。它需要一个索引和一个函数(提供默认值)，以在索引超出范围时提供默认值。
 
 ```run-kotlin
 fun main() {
@@ -17,7 +16,7 @@ fun main() {
 1. Prints the element at the index `1`.
 2. Prints `42` because the index `10` is out of bounds. 
 
-`getOrElse` can also be applied to `Map` to get the value for the given key. 
+`getOrElse`还可以应用于`Map`以获得给定键的值。
 
 ```run-kotlin
 fun main() {
@@ -37,4 +36,4 @@ fun main() {
 
 1. Prints the default value because the key `"x"` is not in the map.
 2. Prints `3`, the value for the key `"x"`.
-3. Prints the default value because the value for the key `"x"` is not defined.
+3. 打印默认值，因为未定义键`"x"`的值。

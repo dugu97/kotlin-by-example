@@ -1,6 +1,6 @@
 # filter
 
-*filter* function enables you to filter collections. It takes a filter predicate as a lambda-parameter. The predicate is applied to each element. Elements that make the predicate `true` are returned in the result collection.
+*filter* 过滤器功能使您可以过滤集合。它使用一个过滤谓词作为lambda参数。谓词应用于每个元素。构成谓词`true`的元素将在结果集合中返回。
 
 ```run-kotlin
 fun main() {
@@ -20,5 +20,5 @@ fun main() {
 ```
 
 1. Defines collection of numbers.
-2. Gets positive numbers.
-3. Uses the shorter `it` notation to get negative numbers. 
+2. 获取正数。
+3. 使用较短的`it`表示法来获取负数
