@@ -1,7 +1,7 @@
 # let
 
-The Kotlin standard library function `let` can be used for scoping and null-checks. When called on an object, `let` executes the given block of code and returns the result of its last expression.
-The object is accessible inside the block by the reference `it`. 
+Kotlin标准库函数`let`可用于`作用域`和`null检查`。当调用一个对象时，`let`执行给定的代码块并返回其最后一个表达式的结果。
+通过引用`it`可在块内部访问该对象。
 
 ```run-kotlin
 fun customPrint(s: String) {
@@ -35,4 +35,4 @@ fun main() {
 1. Calls the given block on the result on the string "_test_".
 2. Calls the function on "_test_" by the `it` reference.
 3. `let` returns the value of this expression.
-4. Uses safe call, so `let` and its code block will be executed only on non-null values.   
+4. 使用安全调用，因此`let`及其代码块将仅在`non-null`值上执行。

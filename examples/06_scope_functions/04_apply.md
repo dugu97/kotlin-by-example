@@ -1,7 +1,7 @@
 # apply
 
-`apply` executes a block of code on an object and returns the object itself. Inside the block, the object is referenced by `this`.
-This function is handy for initializing objects.  
+`apply`在对象上执行代码块并返回对象本身。在块内部，对象由`this`引用。
+此功能对于初始化对象非常方便。
 
 ```run-kotlin
 data class Person(var name: String, var age: Int, var about: String) {

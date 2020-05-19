@@ -1,7 +1,7 @@
 # run
 
-Like [`let`](01_let), `run` is another scoping function from the standard library. Basically, it does the same: executes a code block and returns its result. 
-The difference is that inside `run` the object is accessed by `this`. This is useful when you want to call the object's methods rather than pass it as an argument.
+类似 [`let`](01_let), `run`是标准库中的另一个作用域函数。基本上，它执行相同的操作：执行代码块并返回其结果。
+区别在于，在`run`内部，对象通过`this`访问。当您要调用对象的方法而不是将其作为参数传递时，这很有用。
 
 ```run-kotlin
 
@@ -24,4 +24,4 @@ fun main() {
 
 1. Calls the given block on a nullable variable.
 2. Inside `run`, the object's members are accessed without its name.
-3. `run` returns the `length` of the given `String` if it's not `null`.     
+3. 如果不是`null`，则`run`会返回给定`String`的`length`。     

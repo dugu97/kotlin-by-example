@@ -2,7 +2,7 @@
 
 # with
 
-`with` is a non-extension function that can access members of its argument concisely: you can omit the instance name when referring to its members. 
+`with`是一个`non-extension`函数，可以简洁地访问其参数的成员：在引用其成员时，可以省略实例名称。
 
 ```run-kotlin
 class Configuration(var host: String, var port: Int) 
