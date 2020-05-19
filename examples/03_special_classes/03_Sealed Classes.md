@@ -1,6 +1,6 @@
 # Sealed Classes
 
-[Sealed classes](https://kotlinlang.org/docs/reference/sealed-classes.html) let you restrict the use of inheritance. Once you declare a class sealed, it can only be subclassed from inside the same file where the sealed class is declared. It cannot be subclassed outside of the file where the sealed class is declared. 
+[Sealed classes](https://kotlinlang.org/docs/reference/sealed-classes.html) 让您限制继承的使用。声明密封的类后，只能从声明密封的类的同一文件内部对其进行子类化。不能在声明密封类的文件之外对它进行子类化。 
 
 ```run-kotlin
 sealed class Mammal(val name: String)                                                   // 1
@@ -21,10 +21,10 @@ fun main() {
 ```
 
 1. Defines a sealed class. 
-2. Defines subclasses. Note that all subclasses must be in the same file.
+2. 定义子类。请注意，所有子类必须位于同一文件中。
 3. Uses an instance of the sealed class as an argument in a `when` expression. 
-4. A smartcast is performed, casting `Mammal` to `Human`.
-5. A smartcast is performed, casting `Mammal` to `Cat`.
-6. The `else`-case is not necessary here since all possible subclasses of the sealed class are covered. With a non-sealed superclass `else` would be required.
+4. 执行smartcast，将`Mammal`投向`Human`。
+5. 执行smartcast，将`Mammal`投向`Cat`。
+6. 这里没有其他情况，因为涵盖了密封类的所有可能的子类。对于非密封的超类，将需要`else`。
 
 

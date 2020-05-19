@@ -1,6 +1,6 @@
 # Enum Classes
 
-[Enum classes](https://kotlinlang.org/docs/reference/enum-classes.html) are used to model types that represent a finite set of distinct values, such as directions, states, modes, and so forth.
+[Enum classes](https://kotlinlang.org/docs/reference/enum-classes.html) 用于对表示有限的一组不同值的类型进行建模，例如方向，状态，模式等。
 
 ```run-kotlin
 enum class State {
@@ -19,11 +19,11 @@ fun main() {
 
 ```
 
-1. Defines a simple enum class with three enum instances. The number of instances is always finite and they are all distinct.
-2. Accesses an enum instance via the class name.
-3. With enums, the compiler can infer if a `when`-expression is exhaustive so that you don't need the `else`-case.
+1. 用三个枚举实例定义一个简单的枚举类。实例的数量始终是有限的，并且它们都是不同的。
+2. 通过类名称访问枚举实例。
+3. 使用枚举，编译器可以推断出`when`-expression是否全面，因此您不需要`else`-case。
 
-Enums may contain properties and methods like other classes, separated from the list of instances by a semicolon.
+枚举可能包含与其他类一样的属性和方法，用分号将其与实例列表分开
 
 ```run-kotlin
 
@@ -45,9 +45,9 @@ fun main() {
 
 ```
 
-1. Defines an enum class with a property and a method.
-2. Each instance must pass an argument for the constructor parameter.
-3. Enum class members are separated from the instance definitions by a semicolon.
+1. 定义带有属性和方法的枚举类。
+2. 每个实例必须为构造函数参数传递一个参数。
+3. 枚举类成员与实例定义之间用分号分隔。
 4. The default `toString` returns the name of the instance, here `"RED"`.
-5. Calls a method on an enum instance.
-6. Calls a method via enum class name.
+5. 在枚举实例上调用方法。
+6. 通过枚举类名称调用方法。

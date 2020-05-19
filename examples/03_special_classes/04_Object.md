@@ -1,7 +1,6 @@
 # Object Keyword
 
-Classes and objects in Kotlin work the same way as in most object-oriented languages: a *class* is a blueprint, and an *object* is an instance of a class. Usually, you define a class and then create multiple instances of that class:
-
+Kotlin中的类和对象的工作方式与大多数面向对象的语言相同：*class*是一个蓝图, *object*是一个类的实例。通常，您定义一个类，然后创建该类的多个实例：
 ```run-kotlin
 import java.util.Random
 
@@ -28,17 +27,14 @@ fun main() {
 
 In Kotlin you also have the [**object** keyword](https://kotlinlang.org/docs/reference/object-declarations.html). It is used to obtain a *data type with a single implementation*.
 
-If you are a Java user and want to understand what "*single*" means, you can think of the **Singleton** pattern:
-it ensures you that only one instance of that class is created even if 2 threads try to create it.
+如果您是Java用户，并且想了解“*single*”的含义，可以考虑**Singleton**模式：即使您有2个线程尝试创建该类，它也可以确保仅创建该类的一个实例。 。
 
-To achieve this in Kotlin, you only need to declare an `object`: no class, no constructor, only a lazy instance.
-Why lazy? Because it will be created once when the object is accessed. Otherwise, it won't even be created.
+要在Kotlin中实现此目标，您只需声明一个`object`：没有类，没有构造函数，只有一个`lazy instance`。Why lazy? 因为它将在访问对象时创建一次。否则，它甚至不会被创建。
 
 ### `object` Expression
 
-Here is a basic typical usage of an `object` **expression**: a simple object/properties structure.
-There is no need to do so in class declaration: you create a single object, declare its members and access it within one function. 
-Objects like this are often created in Java as anonymous class instances.
+这是 `object` **expression**的基本典型用法：简单的对象/属性结构。
+在类声明中不需要这样做：创建一个对象，声明其成员并在一个函数中访问它。像这样的对象通常在Java中作为匿名类实例创建。
 
 ```run-kotlin
 fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  //1
@@ -60,15 +56,15 @@ fun main() {
 }
 ```
 
-1. Creates a function with parameters.
-2. Creates an object to use when calculating the result value.
-3. Accesses the object's properties.
-4. Prints the result.
-5. Calls the function. This is when the object is actually created.
+1. 创建带有参数的函数。
+2. 创建一个在计算结果值时要使用的对象。
+3. 访问对象的属性。
+4. 打印结果。
+5. 调用函数。这是实际创建对象的时间。
 
 ### `object` Declaration
 
-You can also use the `object` **declaration**. It isn't an expression, and can't be used in a variable assignment. You should use it to directly access its members:
+您还可以使用`object` **declaration**。它不是表达式，不能在变量赋值中使用。您应该使用它直接访问其成员：
 
 ```run-kotlin
 object DoAuth {                                                 //1 
@@ -93,6 +89,10 @@ An object declaration inside a class defines another useful case: the **companio
 Syntactically it's similar to the static methods in Java: you call object members using its *class name* as a qualifier.
 If you plan to use a companion object in Kotlin, consider using a *package-level* function instead.  
 
+类内的对象声明定义了另一种有用的情况：**companion object**。
+从语法上讲，它类似于Java中的静态方法：您可以使用对象的*class name*作为限定符来调用对象成员。
+如果您打算在Kotlin中使用伴随对象，请考虑改用*package-level*函数。
+
 ```run-kotlin
 class BigBen {                                  //1 
     companion object Bonger {                   //2
@@ -110,6 +110,6 @@ fun main() {
 ```
 
 1. Defines a class.
-2. Defines a companion. Its name can be omitted.
+2. 定义一个`companion object`。其名称可以省略。
 3. Defines a companion object method.
-4. Calls the companion object method via the class name.
+4. 通过类名称调用伴随对象方法。
