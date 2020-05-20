@@ -1,6 +1,6 @@
 # Destructuring Declarations
 
-[Destructuring declaration](https://kotlinlang.org/docs/reference/multi-declarations.html#destructuring-declarations) syntax can be very handy, especially when you need an instance only for accessing its members. It lets you define the instance without a specific name therefore saving a few lines of code.
+[Destructuring declaration](https://kotlinlang.org/docs/reference/multi-declarations.html#destructuring-declarations) 结构声明语法非常方便，尤其是当您仅需要一个实例来访问其成员时。它使您可以定义实例而无需使用特定名称，从而节省了几行代码。
 
 ```run-kotlin
 fun findMinMax(list: List<Int>): Pair<Int, Int> { 
@@ -44,8 +44,8 @@ fun main() {
 
 1. Defines a data class.
 2. Destructures an instance. Declared values are mapped to the instance fields.
-3. Data class automatically defines the `component1()` and `component2()` methods that will be called during destructuring.
-4. Use _underscore_ if you don't need one of the values, avoiding the compiler hint indicating an unused variable.
+3. 在解构的过程中，会调用`data class`自动生成的`component1()` 和 `component2()`方法。
+4. 如果不需要这些值之一，请使用 _下划线_，以避免编译器提示指示未使用的变量
 
 ```run-kotlin
 class Pair<K, V>(val first: K, val second: V) {  // 1
@@ -66,4 +66,4 @@ fun main() {
 ```
 
 1. Defines a custom `Pair` class with `component1()` and `component2()` methods.
-2. Destructures an instance of this class the same way as for built-in `Pair`.
+2. 与内置`Pair`相同的方式来解构此类的实例。

@@ -1,7 +1,7 @@
 # Named Arguments
 
-As with most other programming languages (Java, C++, etc.), Kotlin supports passing arguments to methods and constructors according to the order they are defined.
-Kotlin also supports [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments) to allow clearer invocations and avoid mistakes with the order of arguments. Such mistakes are hard to find because they are not detected by the compiler, for example, when two sequential arguments have the same type.
+与大多数其他编程语言（Java，C ++等）一样，Kotlin支持根据定义的顺序将参数传递给方法和构造函数。
+Kotlin还支持[named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments)，以实现更清晰的调用并避免参数顺序出错。这样的错误很难找到，因为例如两个连续的参数具有相同的类型时，编译器就不会检测到它们。
 
 ```run-kotlin
 fun format(userName: String, domain: String) = "$userName@$domain"

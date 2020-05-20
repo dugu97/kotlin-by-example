@@ -1,10 +1,10 @@
 # Smart Casts 
 
 
-The Kotlin compiler is smart enough to perform type casts automatically in most cases, including:
+Kotlin编译器足够聪明，可以在大多数情况下自动执行类型转换，包括：
 
-1. Casts from nullable types to their non-nullable counterparts.
-2. Casts from a supertype to a subtype.
+1. 从可为空的类型强制转换为非可为空的对应类型。
+2. 从父类型转换为子类型。
 
 ```run-kotlin
 import java.time.LocalDate
@@ -36,9 +36,9 @@ fun main() {
 ```
 
 1. Declares a nullable variable.
-2. Smart-cast to non-nullable (thus allowing direct access to `isLeapYear`).
-3. Smart-cast inside a condition (this is possible because, like Java, Kotlin uses [short-circuiting](https://en.wikipedia.org/wiki/Short-circuit_evaluation)).
-4. Smart-cast inside a condition (also enabled by short-circuiting).
-5. Smart-cast to the subtype `LocalDate`.
+2. 自动转换为`non-nullable`（因此可以直接访问`isLeapYear`）。
+3. 在条件内进行自动转换（这是可能的，因为像Java一样，Kotlin使用[short-circuiting(短路)](https://en.wikipedia.org/wiki/Short-circuit_evaluation)).
+4. 在条件内进行自动转换（也可通过`short-circuiting(短路)`启用）
+5. 自动转换到子类型“ LocalDate”。
 
-This way, you can automatically use variables as desired in most cases without doing obvious casts manually.
+这样，您可以在大多数情况下根据需要自动使用变量，而无需手动进行明显的强制转换。
