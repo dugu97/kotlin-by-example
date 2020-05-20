@@ -1,8 +1,8 @@
 # dynamic
 
-*dynamic* is a special type in Kotlin/JS. It basically turns off Kotlin's type checker.
-That is needed in order  to interoperate with untyped or loosely typed environments, such 
-as the JavaScript ecosystem.
+*dynamic*是`Kotlin/JS`中的一种特殊类型。它基本上关闭了Kotlin的类型检查器。
+为了与无类型或松散类型的环境进行互操作，这是必需的，例如
+作为JavaScript生态系统。
 
 ```run-kotlin-js
 fun main(){
@@ -26,9 +26,9 @@ fun main(){
 }
 ```
 
-1. Any value can be assigned to a `dynamic` variable type.
-2. A dynamic value can be assigned to anything.
-3. A dynamic variable can be passed as an argument to any function.
-4. Any property or function with any arguments can be called on a `dynamic` variable. 
-5. A function call on a `dynamic` variable always returns a dynamic value, so it is possible to chain the calls.
-6. Operators, assignments, and indexed access (`[..]`) are translated "as is". Beware!
+1. 任何值都可以分配给`dynamic`变量类型。
+2. 动态值可以分配给任何变量类型。
+3. 动态变量可以作为参数传递给任何函数。
+4. 任何带有任何参数的属性或函数都可以在`dynamic`变量上调用。
+5. 对`dynamic`变量的函数调用总是返回动态值，因此可以链接这些调用。
+6. 运算符，分配和索引访问(`[..]`)均按“原样”翻译。谨防！
