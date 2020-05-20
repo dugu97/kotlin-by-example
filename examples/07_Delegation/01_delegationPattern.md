@@ -1,6 +1,6 @@
 # Delegation Pattern
 
-Kotlin supports easy implementation of the [delegation pattern](https://kotlinlang.org/docs/reference/delegation.html) on the native level without any boilerplate code.
+Kotlin支持在本机级别轻松实现[委托模式](https://kotlinlang.org/docs/reference/delegation.html)，而无需任何样板代码。
 
 ```run-kotlin
 interface SoundBehavior {                                                          // 1
@@ -32,7 +32,5 @@ fun main() {
 
 1.  Defines the interface `SoundBehavior` with one method. 
 2.  The classes `ScreamBehavior` and `RockAndRollBehavior` implement the interface and contain their own implementations of the method.
-3.  The classes `TomAraya` and `ElvisPresley` also implement the interface, but not the method. Instead, they delegate the method calls to the 
-    responsible implementation. The delegate object is defined after the `by` keyword. As you see, no boilerplate code is required.
-4.  When `makeSound()` is called on `tomAraya` of type `TomAraya` or `elvisPresley` of type `ElvisPresley`, the call is delegated to the
-    corresponding delegate object.
+3.  `TomAraya`和`ElvisPresley`类也实现了接口，但没有实现该方法。而是将方法调用委托给委托对象。委托对象是在`by`关键字之后定义的。如您所见，不需要样板代码。
+4.  在类型为`TomAraya`的`tomAraya`或类型为`ElvisPresley`的`elvisPresley`上调用makeSound（）时，该调用将委派给相应的委托对象。

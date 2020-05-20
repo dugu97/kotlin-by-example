@@ -1,7 +1,7 @@
 # Delegated Properties
 
-Kotlin provides a mechanism of [delegated properties](http://kotlinlang.org/docs/reference/delegated-properties.html) that allows delegating the calls of the property `set` and `get` methods to a certain object.
-The delegate object in this case should have the method `getValue`. For mutable properties, you'll also need `setValue`.
+Kotlin提供了[Delegated Properties](http://kotlinlang.org/docs/reference/delegated-properties.html)的机制，该机制允许将对set和get方法的调用委托给某个对象。  
+在这种情况下，委托对象应具有方法`getValue`。对于可变属性，您还需要`setValue`。
 
 ```run-kotlin
 import kotlin.reflect.KProperty
@@ -29,13 +29,13 @@ fun main() {
 }
 ```
 
-1. Delegates property `p` of type `String` to the instance of class `Delegate`. The delegate object is defined after the `by` keyword.
-2. Delegation methods. The signatures of these methods are always as shown in the example. Implementations may contain any steps you need. For immutable properties only `getValue` is required.
+1. 将类型为`String`的属性`p`委托给类`Delegate`的实例。委托对象是在`by`关键字之后定义的。
+2. 委托方法。这些方法的签名始终如示例中所示。实现可能包含您需要的任何步骤。对于不可变属性，仅需要`getValue`。
 
 ### Standard Delegates 
 
-The Kotlin standard library contains a bunch of useful delegates, like `lazy`, `observable`, and others. You may use them as is.
-For example `lazy`is used for lazy initialization.
+Kotlin标准库包含一堆有用的委托，例如`lazy`，`observable`和其他。您可以按原样使用它们。
+例如，`lazy`用于延迟初始化。
 
 ```run-kotlin
 class LazySample {
@@ -56,16 +56,16 @@ fun main() {
 }
 ```
 
- 1. Property `lazy` is not initialized on object creation.
+ 1. 属性`lazy`在对象创建时未初始化。
  2. The first call to `get()` executes the lambda expression passed to `lazy()` as an argument and saves the result.
  3. Further calls to `get()` return the saved result.
 
- If you want thread safety, use `blockingLazy()` instead: it guarantees that the values will be computed only in one thread and that all threads will see the same value.
+默认情况下，惰性属性的求值是同步的：仅在一个线程中计算该值，并且所有线程将看到相同的值。如果不需要同步初始化委托，以便多个线程可以同时执行它，请将LazyThreadSafetyMode.PUBLICATION作为参数传递给lazy()函数。  
+而且，如果您确定初始化将始终与使用该属性的线程在同一线程上进行，则可以使用LazyThreadSafetyMode.NONE：它不会产生任何线程安全保证和相关的开销。
 
 ### Storing Properties in a Map
 
-Property delegation can be used for storing properties in a map. This is handy for tasks like parsing JSON
-or doing other "dynamic" stuff.
+属性委派可用于在map中存储属性。这对于诸如解析JSON或执行其他"dynamic"工作之类的任务非常方便。
 
 ```run-kotlin
 class User(val map: Map<String, Any?>) {
@@ -85,4 +85,4 @@ fun main() {
 
 1. Delegates take values from the `map` by the string keys - names of properties.
 
-You can delegate mutable properties to a map as well. In this case, the map will be modified upon property assignments. Note that you will need `MutableMap` instead of read-only `Map`.
+您也可以将`mutable properties`委派给map。在这种情况下，map将根据属性分配进行修改。注意，您将需要`MutableMap`而不是只读的`Map`。
